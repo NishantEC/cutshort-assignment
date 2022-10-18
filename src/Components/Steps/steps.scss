@@ -1,0 +1,60 @@
+.progressBar {
+  position: relative;
+  width: 300px;
+  margin: 50px;
+  display: flex;
+  place-items: center;
+}
+.bar {
+  background-color: #c2c2c2;
+  height: 2px;
+  width: 300px;
+  div {
+    height: 100%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    background-color: #5a4ad1;
+  }
+}
+.steps {
+  width: 300px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 12px;
+    text-align: center;
+    color: #5d5d5d;
+    background-color: #ffffff;
+    border: 1px solid #c2c2c2;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+
+  .active {
+    color: white;
+    background-color: #5a4ad1;
+    border: none;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+}
