@@ -11,19 +11,14 @@ function App() {
   const [StepId, setStepId] = useState(0);
   const [planState, setPlanState] = useState("");
   const [isError, setIsError] = useState(false);
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState({
+    fullName: "",
+    displayName: "",
+    workspaceName: "",
+    workspaceUrl: "",
+    planToUse: "",
+  });
 
-  function resetApp() {
-    setUserData({
-      fullName: "",
-      displayName: "",
-      workspaceName: "",
-      workspaceUrl: "",
-      planToUse: "",
-    });
-    setPlanState("")
-    setStepId(0);
-  }
 
   
 
@@ -63,18 +58,12 @@ function App() {
         }, 1000);
       }
     }
-    if (StepId === 3) {
-      resetApp();
-    }
   }
 
   useEffect(() => {
     setUserData((prev) => ({ ...prev, planToUse: planState }));
   }, [planState]);
 
-  useEffect(() => {
-    resetApp();
-  }, []);
 
   useEffect(() => {
     console.log(isError);
@@ -180,7 +169,7 @@ function App() {
                 {" "}
                 <br /> With my team
               </span>
-              <p>Wikis,docs,tasks & projects,all in one place.</p>{" "}
+              <p>Wikis, docs, tasks & projects, all in one place.</p>{" "}
             </div>
           </div>
         )}
